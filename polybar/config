@@ -1,18 +1,17 @@
 ;==========================================================
 ;
+;                                                                                            
+;8 8888888888    8 8888 8 888888888o.      8 888888888o.       ,o888888o.        d888888o.   
+;8 8888          8 8888 8 8888    `^888.   8 8888    `88.   . 8888     `88.    .`8888:' `88. 
+;8 8888          8 8888 8 8888        `88. 8 8888     `88  ,8 8888       `8b   8.`8888.   Y8 
+;8 8888          8 8888 8 8888         `88 8 8888     ,88  88 8888        `8b  `8.`8888.     
+;8 888888888888  8 8888 8 8888          88 8 8888.   ,88'  88 8888         88   `8.`8888.    
+;8 8888          8 8888 8 8888          88 8 888888888P'   88 8888         88    `8.`8888.   
+;8 8888          8 8888 8 8888         ,88 8 8888`8b       88 8888        ,8P     `8.`8888.  
+;8 8888          8 8888 8 8888        ,88' 8 8888 `8b.     `8 8888       ,8P  8b   `8.`8888. 
+;8 8888          8 8888 8 8888    ,o88P'   8 8888   `8b.    ` 8888     ,88'   `8b.  ;8.`8888 
+;8 888888888888  8 8888 8 888888888P'      8 8888     `88.     `8888888P'      `Y8888P ,88P' 
 ;
-;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
-;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
-;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
-;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
-;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
-;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
-;
-;
-;   To learn more about how to configure Polybar
-;   go to https://github.com/polybar/polybar
-;
-;   The README contains a lot of information
 ;
 ;==========================================================
 
@@ -83,121 +82,6 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 
 
-[bar/right]
-;monitor = ${env:MONITOR:HDMI-1}
-width = 30%
-height = 26
-offset-x = 70%
-offset-y = -20%
-radius = 15
-fixed-center = false
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 3
-line-color = #f00
-
-border-size = 0
-border-color = #00000000
-
-padding-left = 2
-padding-right = 2
-
-module-margin-left = 1
-module-margin-right = 2
-
-font-0 = FiraCode:size=11;1
-font-1 = Material Icons:size=13;1
-font-2 = Symbols Nerd Fonts:size=13;1
-font-3 = Font Awesome:size= 10;1
-font-4 = NotoEmoji Nerd Font:size=13;1 
-
-;modules-left = mpd
-;modules-center = mpd
-modules-right =  logout date battery pulseaudio ||
-
-
-
-tray-position = right
-tray-padding = 10
-;tray-background = #000063ff
-
-;wm-restack = bspwm
-;wm-restack = i3
-
-override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-
-
-
-
-
-[bar/center]
-;monitor = ${env:MONITOR:HDMI-1}
-width = 30%
-height = 26
-offset-x = 35%
-offset-y = -20%
-radius = 15
-fixed-center = false
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 3
-line-color = #f00
-
-border-size = 0
-border-color = #00000000
-
-padding-left = 2
-padding-right = 2
-
-module-margin-left = 1
-module-margin-right = 2
-
-font-0 = FiraCode:size=11;1
-font-1 = Material Icons:size=13;1
-font-2 = Symbols Nerd Fonts:size=13;1
-font-3 = Font Awesome:size= 10;1
-font-4 = NotoEmoji Nerd Font:size=13;1 
-
-;modules-left = mpd
-modules-center = mpd
-;modules-right =   wlan battery pulseaudio date
-
-
-
-;tray-position = center
-;tray-padding = 0
-;tray-background = #0063ff
-
-;wm-restack = bspwm
-;wm-restack = i3
-
-override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-
-
 
 [module/xwindow]
 type = internal/xwindow
@@ -257,16 +141,6 @@ type = internal/i3
 format = <label-state> <label-mode>
 index-sort = true
 wrapping-scroll = false
-
-
-
-ws-icon-0 = ♚
-ws-icon-1 = ♛
-ws-icon-2 = ♜
-ws-icon-3 = ♝
-ws-icon-4 = ♞
-ws-icon-default = ♟
-
 
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
@@ -392,25 +266,6 @@ format-disconnected =
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
-
-[module/time]
-type = custom/script
-exec = date '+%H:%S %p'
-interval = 5
-format =  <label>
-format-foreground = #ffffff
-label = "%output%"
-click-left = kitty -e calcurse
-
-[module/date]
-
-type = custom/script
-exec = date '+%a %d %b %y'
-interval = 5
-format =  <label>
-format-foreground = #ffffff
-label = %output%
-click-left = kitty -e calcurse
 
 
 [module/pulseaudio]
@@ -578,33 +433,9 @@ margin-bottom = 5
 
 
 
-
-[module/workspaces]
-type = internal/xworkspaces
-pin-workspaces = true
-enable-click = true
-enable-scroll = true
-format-padding = 1 
-
-format = <label-state>
-label-active = %name%
-label-occupied = %name%
-label-urgent = %name%
-label-empty = %name%
-
-label-active-foreground = #ffffff
-label-active-background = #3289EC
-label-active-underline = #3289EC
-label-active-padding = 0
-
-label-occupied-underline = #ffffff
-
-label-urgent-foreground = #000000
-label-urgent-background = #bd2c40
-label-urgent-underline = #ffffff
-label-urgent-padding = 0
-
-
+#
+#   CUSTOM SCRIPTS
+#
 
 
 [module/logout]
@@ -623,7 +454,6 @@ click-left = qalculate-gtk
 
 
 [module/spotify]
-;https://github.com/NicholasFeldman/dotfiles/blob/master/polybar/.config/polybar/spotify.sh
 type = custom/script
 exec = ~/.config/polybar/scripts/spotify.sh
 interval = 1
@@ -636,4 +466,24 @@ format-padding = 2
 format-prefix = "阮 "
 format-prefix-foreground = #0f0
 label = %output:0:150%
+click-left = playerctl -p spotify play-pause
+click-right = playerctl -p spotify next
 
+[module/time]
+type = custom/script
+exec = date '+%I:%S %p'
+interval = 5
+format =  <label>
+format-foreground = #ffffff
+label = "%output%"
+click-left = alacritty -e tty-clock -cD -C 4
+
+[module/date]
+
+type = custom/script
+exec = date '+%a %d %b %y'
+interval = 5
+format =  <label>
+format-foreground = #ffffff
+label = %output%
+click-left = kitty -e calcurse
