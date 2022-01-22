@@ -7,7 +7,7 @@ super + space
 	rofi -show run
 super + p
 	pcmanfm
-super + e
+super + shift + l
 	arcolinux-logout
 super + Escape
 	pkill -USR1 -x sxhkd
@@ -15,7 +15,9 @@ super + shift + b
 	brave
 super + shift + x
 	betterlockscreen -l
-
+super + e
+	rofimoji
+	
 
 # Volume keys
 
@@ -143,3 +145,4 @@ super + {h,j,k,l}
 # screenshot
 Print
 	xfce4-screenshooter
+
