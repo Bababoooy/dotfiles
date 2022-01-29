@@ -13,6 +13,7 @@ Includes everything you need for a proper workstation
 * [tty-clock](https://aur.archlinux.org/packages/tty-clock-git/)
 * calcurse
 * [cava](https://aur.archlinux.org/packages/cava/)
+* [betterlockscreen](https://aur.archlinux.org/packages/betterlockscreen/)
 
 You can clone the repo 
 
@@ -23,6 +24,12 @@ $ git clone https://github.com/Bababoooy/dotfiles.git
 You can install Rofimoji by `pip`
 
 ```
-$ pip install rofimoji
+$ sudo pip install rofimoji
 ```
 
+Things you need to install:
+```
+$ yay -S nerd-fonts-noto arcolinux-logout tty-clock-git cava betterlockscreen
+
+$ sudo pacman -S calcurse picom
+```
