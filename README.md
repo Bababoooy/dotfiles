@@ -21,7 +21,7 @@ You can clone the repo
 $ git clone https://github.com/Bababoooy/dotfiles.git
 ```
 
-You can install Rofimoji by `pip`
+You can install Rofimoji using `pip`
 
 ```
 $ sudo pip install rofimoji
