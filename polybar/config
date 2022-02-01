@@ -17,7 +17,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #0a0f14
+background = #151515
 foreground = #99d1ce
 
 background-alt = #9282a36
@@ -169,7 +169,7 @@ type = internal/pulseaudio
 format-volume =  <label-volume>
 
 format-volume-prefix = " 墳"
-format-volume-prefix-foreground = #67921B
+format-volume-prefix-foreground = #9BCA3E
 format-volume-suffix = " "
 ;format-volume-background = #F05454
 format-volume-foreground = ${colors.foreground}
@@ -305,7 +305,7 @@ format-suffix = " "
 format-foreground = ${colors.foreground}
 ;format-background = #F05454
 format-prefix = "  "
-format-prefix-foreground = #b08d04
+format-prefix-foreground = #ED5314
 label = "%output%"
 click-left = notify-send -i ~/.config/polybar/scripts/calender.png "`date +'%A %d %B %Y'`"
 
