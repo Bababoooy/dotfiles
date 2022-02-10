@@ -18,7 +18,7 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 background = #151515
-foreground = #99d1ce
+foreground = #8DA3B9
 
 background-alt = #9282a36
 ;foreground = ${xrdb:color7:#222}
@@ -32,8 +32,8 @@ alert = #bd2c40
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 20
-offset-x = -5%
-offset-y = -20%
+offset-x = 0%
+offset-y = 0%
 radius = 0
 fixed-center = false
 
@@ -50,31 +50,31 @@ padding-left = 1
 padding-right = 0
 
 module-margin-left = 0
-module-margin-right = 0
+module-margin-right = 
 
 
 
-font-0 = FiraCode:size=11;1
+font-0 = Firacode:size=11;1
 font-1 = Weather Icons:size=12;1
 font-3 = Font Awesome:size=12;1
-font-2 = Symbols Nerd Fonts:size=13;1
+font-2 = Symbols Nerd Fonts:size=12;1
 font-4 = NotoEmoji Nerd Font:size=12;1 
 font-5 = Noto Sans JP:size=12;1
-font-6 = EmojiOne Color:size=19;1
+font-6 = EmojiOne Color:size=12;1
 font-7 = Material Icons:size=11;1
 
 
-modules-left = bspwm 
-modules-center = sp spotify  prev  pause  next 
-modules-right = weather battery pulseaudio time sep   
+modules-left = bspwm sp
+;modules-center = info
+modules-right = front weather battery pulseaudio time sep
 
 
 
 tray-position = right
 tray-padding = 7
-tray-scale = 1
-tray-foreground = ${colors.foreground}
-tray-maxsize = 16
+;tray-scale = 0.7
+tray-background = ${colors.foreground}
+;tray-maxsize = 12
 
 
 wm-restack = bspwm
@@ -109,32 +109,27 @@ reverse-scroll = true
 pin-workspaces = true
 
 
-ws-icon-default = 
-
-
-
-
-
 format = <label-state> <label-mode>
 
-label-focused = 
-label-focused-foreground = ${colors.foreground}
-label-focused-underline = #6790eb
-label-focused-background = #292d3e
-label-focused-padding = 1
+label-focused = %name% 
+label-focused-foreground = ${colors.background}
+;label-focused-underline = #
+label-focused-background = ${colors.foreground}
+label-focused-padding = 3
 
 
-label-occupied = 
-label-occupied-padding = 1
-label-occupied-background = ${colors.background}
+label-occupied = %name%
+label-occupied-padding = 3
+label-occupied-background = #3a434c
 label-occupied-foreground = ${colors.foreground}
+label-occupied-underline = #3a434c
 
-label-urgent = %icon%!
-label-urgent-padding = 1
+label-urgent = %name%!!
+label-urgent-padding = 2
 
-label-empty = %icon%
+label-empty = %name%
 label-empty-foreground = ${colors.foreground}
-label-empty-padding = 1
+label-empty-padding = 2
 
 
 
@@ -168,18 +163,17 @@ type = internal/pulseaudio
 
 format-volume =  <label-volume>
 
-format-volume-prefix = " 墳"
-format-volume-prefix-foreground = #9BCA3E
+format-volume-prefix = " 墳 "
 format-volume-suffix = " "
-;format-volume-background = #F05454
-format-volume-foreground = ${colors.foreground}
+format-volume-background = ${colors.foreground}
+format-volume-foreground = ${colors.background}
 label-volume = %percentage%%
 
 
 
 label-muted = "    "
-label-muted-foreground = #666
-;label-muted-background = #F05454
+label-muted-foreground = ${colors.background}
+label-muted-background = ${colors.foreground}
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -198,7 +192,7 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 click-right = pavucontrol &
-
+click-left = exec /home/eidros/.scripts/Volume/random.sh mute
 
 
 [module/battery]
@@ -208,27 +202,26 @@ adapter = AC
 full-at = 98
 
 ;format-charging-background = #8d62a9
-format-charging =<animation-charging><label-charging>
+format-charging =<animation-charging> <label-charging>
 format-charging-prefix = " "
 format-charging-suffix = " "
-format-charging-foreground = ${colors.foreground}
-;format-charging-underline = #F05454
+format-charging-foreground = ${colors.background}
+format-charging-background = ${colors.foreground}
 
 
 ;format-discharging-background = #8d62a9
-format-discharging =<ramp-capacity><label-discharging>
+format-discharging =<ramp-capacity> <label-discharging>
 format-discharging-prefix = " "
 format-discharging-suffix = " "
-format-discharging-foreground = ${colors.foreground}
-;format-discharging-underline = ${self.format-charging-underline}
+format-discharging-foreground = #151515
+format-discharging-background = ${colors.foreground}
 
 
 ;format-full-background = #8d62a9
 format-full-prefix = " "
 format-full-suffix = " "
-format-full-foreground = ${colors.foreground}
-format-full-prefix-foreground = #F05454
-;format-full-underline = ${self.format-charging-underline}
+format-full-foreground = ${colors.background}
+format-full-background = ${colors.foreground}
 
 
 
@@ -238,7 +231,6 @@ animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
 animation-charging-5 = 
-animation-charging-foreground = #4C9A2A 
 
 
 ramp-capacity-0 = 
@@ -251,10 +243,9 @@ ramp-capacity-6 = 
 ramp-capacity-7 = 
 ramp-capacity-8 = 
 ramp-capacity-9 = 
-ramp-capacity-0-foreground = #E65652 
-ramp-capacity-1-foreground = #FB8560
-ramp-capacity-2-foreground = #FCD248
-ramp-capacity-foreground = #fff
+;ramp-capacity-0-foreground = #E65652 
+;ramp-capacity-1-foreground = #FB8560
+;ramp-capacity-2-foreground = #FCD248
 
 
 
@@ -292,7 +283,7 @@ format-padding = 2
 ;format-underline = #0f0
 format-prefix = "阮 "
 format-prefix-foreground = #0f0
-label = %output:0:26%
+label = %output:0:28%
 
 
 
@@ -302,10 +293,9 @@ exec = date '+%I:%M %p'
 interval = 5
 format =  <label>
 format-suffix = " "
-format-foreground = ${colors.foreground}
-;format-background = #F05454
-format-prefix = "  "
-format-prefix-foreground = #ED5314
+format-foreground = ${colors.background}
+format-background = ${colors.foreground}
+format-prefix = "  " 
 label = "%output%"
 click-left = notify-send -i ~/.config/polybar/scripts/calender.png "`date +'%A %d %B %Y'`"
 
@@ -347,13 +337,14 @@ ramp-foreground = #CBB200
 [module/weather]
 type = custom/script
 exec = curl -s 'https://wttr.in/?format=%c%t' | cut -c 1-20
-click-left = chromium -e wttr.in 
+click-left =  notify-send "`curl -s 'https://wttr.in/?format=4'`" 
 interval = 120
 format = <label>
 format-prefix = " "
 format-suffix = " "
-;format-background = #F05454
-format-foreground = ${colors.foreground}
+format-background = ${colors.foreground}
+format-foreground = ${colors.background}
+
 label = %output%
 
 
@@ -377,7 +368,7 @@ content-suffix = " "
 ;content-background = #8d62a9
 content-foreground = ${colors.foreground}
 
-click-left = playerctl -p spotify play-pause
+click-left = playerctl -p spotify play-pause  
 
 
 
@@ -414,8 +405,8 @@ content-foreground = #F05454
 
 [module/front]
 type = custom/text
-content = ""
-content-foreground = #F05454
+content = ""
+content-foreground = ${colors.foreground}
 ;content-background = 
 
 [module/arrow3]
@@ -439,11 +430,23 @@ content-foreground = #F05454
 
 [module/sep]
 type = custom/text
-content = "|"
-content-foreground = #666
-
+content = ""
+content-foreground = ${colors.background}
+content-background = ${colors.foreground}
 
 [module/sp]
 type = custom/text
-content = "                           "
+content = "                                                "
 content-foreground = #666
+
+
+[module/logo]
+type = custom/text
+content = " "
+content-foreground = ${colors.foreground}
+click-left = rofi -show drun
+
+[module/info]
+type = custom/script
+exec = ~/.scripts/battery/battery.sh
+interval = 300
